@@ -7,7 +7,7 @@ A community-driven guide and collection of tricks for installing and optimizing 
 ## Table of Contents
 - [Disclaimer](#disclaimer)
 - [Why SteamOS on Ally?](#why-steamos-on-ally)
-- [Supported SteamOS Builds](#supported-steamos-builds)
+- [SteamOS image](#SteamOS-image)
 - [Installation Guide](#installation-guide)
     - [Prerequisites](#prerequisites)
     - [BIOS Settings (Crucial!)](#bios-settings-crucial)
@@ -30,7 +30,7 @@ While the ROG Ally comes with Windows, many users find that **SteamOS** offers a
 * **Potentially Better Battery Life:** Linux-based systems can sometimes offer better power efficiency.
 * **Community-Driven Support:** A vibrant community dedicated to making it work well on non-Steam Deck hardware.
 
-## Supported SteamOS Builds
+## SteamOS image
 This guide primarily focuses on the installation and setup using **Valve's official Steam Deck recovery image**.
 * **Valve's official Steam Deck recovery image:** [https://store.steampowered.com/steamos/download/?ver=steamdeck&snr=100601___](https://store.steampowered.com/steamos/download/?ver=steamdeck&snr=100601___)
 
