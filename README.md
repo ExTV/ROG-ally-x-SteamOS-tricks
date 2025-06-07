@@ -66,9 +66,7 @@ Before installing the operating system, you **must** configure specific settings
     * Power on your Ally. As soon as you see the ROG logo, repeatedly press the **Volume Down button** until the boot menu appears.
     * Select your USB drive from the boot options.
 3.  **Follow On-Screen Installer Instructions:**
-    * The installer will boot. Follow the prompts to install your chosen OS.
-    * **Crucial Step:** When prompted for disk partitioning, you'll likely want to **wipe the entire drive** and install the new OS. Be extremely careful here if you have other partitions you wish to preserve (though this is uncommon for a full OS install on the Ally).
-    * [**YOUR INPUT NEEDED HERE:** Add specific instructions for the installer. For example: "Choose 'Installer (Force Steam Deck UI)'", "Ensure you select the correct target drive (usually the internal eMMC/NVMe)", "Allow the installer to automatically partition the disk."]
+    * The installer will boot. Follow the prompts to install SteamOS .
 4.  **First Boot & Post-Installation:**
     * Once the installation is complete, remove the USB drive and reboot your Ally.
     * Your new SteamOS system should now boot. You'll likely go through an initial setup process similar to a Steam Deck, including connecting to Wi-Fi and logging into your Steam account.
