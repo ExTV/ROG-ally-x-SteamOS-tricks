@@ -33,7 +33,7 @@ While the ROG Ally comes with Windows, many users find that **SteamOS** offers a
 ## Supported SteamOS Builds
 This guide primarily focuses on the installation and setup using **Valve's official Steam Deck recovery image**.
 * **Valve's official Steam Deck recovery image:** [https://store.steampowered.com/steamos/download/?ver=steamdeck&snr=100601___](https://store.steampowered.com/steamos/download/?ver=steamdeck&snr=100601___)
-* *Please note: While possible, using the official Steam Deck recovery image on the ROG Ally may require significant manual effort for driver installation and optimizations, as it's not natively designed for non-Steam Deck hardware. Community-driven alternatives like HoloISO or Bazzite are often more plug-and-play.*
+
 
 ## Installation Guide
 This section will walk you through the process of getting SteamOS installed on your ROG Ally.
