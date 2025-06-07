@@ -24,7 +24,7 @@ A community-driven guide and collection of tricks for installing and optimizing 
 Installing a non-native operating system on your ROG Ally carries potential risks, including data loss or unexpected behavior. This guide is provided for informational purposes only, and you proceed at your own risk. **Always back up your data!** Neither this guide nor its maintainers are responsible for any damage or issues that may arise.
 
 ## Why SteamOS on Ally?
-While the ROG Ally comes with Windows, many users find that **SteamOS** (or SteamOS-like distributions like Bazzite) offers a superior handheld gaming experience. Benefits often include:
+While the ROG Ally comes with Windows, many users find that **SteamOS** offers a superior handheld gaming experience. Benefits often include:
 * **Optimized Gaming UI:** A seamless, console-like interface for your game library.
 * **Proton Compatibility:** Excellent compatibility with a vast Windows game library through Valve's Proton compatibility layer.
 * **Potentially Better Battery Life:** Linux-based systems can sometimes offer better power efficiency.
