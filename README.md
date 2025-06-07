@@ -1,6 +1,6 @@
-# ROG Ally SteamOS Setup & Tweaks
+# ROG Ally/x SteamOS Setup & Tweaks
 
-A community-driven guide and collection of tricks for installing and optimizing **SteamOS** on your **ASUS ROG Ally**.
+A community-driven guide and collection of tricks for installing and optimizing **SteamOS** on your **ASUS ROG Ally/x**.
 
 ---
 
