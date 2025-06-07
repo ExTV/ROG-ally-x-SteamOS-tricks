@@ -89,7 +89,7 @@ This section provides a curated list of valuable scripts and external tools that
 
 * **Decky Loader:** A plugin loader for Steam Deck's UI, allowing for extensive customization and additional functionality.
     * [Download & Installation](https://decky.xyz/download)
-* **Simple Decky TDP:** A Decky Loader plugin for more granular control over TDP (Thermal Design Power) and GPU settings.
+* **Simple Decky TDP:** A Decky Loader plugin for more granular control over TDP and GPU settings.
     * [GitHub Repository](https://github.com/aarron-lee/SimpleDeckyTDP)
 * **Hue Sync (for LED control):** A plugin to change the LED ring colors on your ROG Ally.
     * [GitHub Repository](https://github.com/honjow/HueSync)
