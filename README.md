@@ -81,6 +81,10 @@ Here's a list of common issues users encounter when running SteamOS on the ROG A
 * **Cause:** The Discover app attempts to start `fwupd` (the firmware update daemon), which temporarily conflicts with the controller input. This was identified by the knowledgeable folks in the ROG Ally Discord.
 * **Solution:** Simply **restart your ROG Ally**. The controller will work normally after reboot. This issue is usually transient and doesn't affect gaming.
 
+## BIOS Cannot Save Disabling Secure Boot
+* **Problem:** When attempting to disable Secure Boot in the ROG Ally's BIOS settings, the changes are not saved upon exiting, and Secure Boot remains enabled.
+* **Cause:** This issue can occur due to a power state or a specific interaction when the device is connected to its charger during the BIOS modification process.
+* **Solution:** **Disconnect your ROG Ally from the charger** before entering the BIOS and attempting to disable Secure Boot. Make the desired change, save, and exit. The setting should now persist. You can reconnect the charger after the system has booted.
 
 ---
 
