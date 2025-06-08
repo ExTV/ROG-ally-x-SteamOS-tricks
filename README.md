@@ -47,7 +47,7 @@ Before you begin, make sure you have:
 ### BIOS Settings (Crucial!)
 Before installing the operating system, you **must** configure specific settings in your ROG Ally's BIOS to ensure compatibility and performance.
 
-1.  While powered off, power on your Ally and immediately hold down the **Volume down button** to enter the BIOS utility. (Alternatively, if already in Windows, hit restart, and then hold down Volume Up button).
+1.  While powered off, power on your Ally and immediately hold down the **Volume down button** to enter the BIOS utility. (Alternatively, if already in Windows, hit restart, and then hold down Volume Down button).
 2.  Once in the BIOS, press 'Y' to switch to **Advanced Mode**.
 3.  Navigate to the **Security** tab using the D-pad (right arrow).
 4.  D-pad down to **Secure Boot**, and press 'A' to select.
