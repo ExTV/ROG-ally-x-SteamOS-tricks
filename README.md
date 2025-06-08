@@ -47,7 +47,7 @@ Before you begin, make sure you have:
 ### BIOS Settings (Crucial!)
 Before installing the operating system, you **must** configure specific settings in your ROG Ally's BIOS to ensure compatibility and performance.
 
-1.  While powered off, power on your Ally and immediately hold down the **Volume Up button** to enter the BIOS utility. (Alternatively, if already in Windows, hit restart, and then hold down Volume Up button).
+1.  While powered off, power on your Ally and immediately hold down the **Volume down button** to enter the BIOS utility. (Alternatively, if already in Windows, hit restart, and then hold down Volume Up button).
 2.  Once in the BIOS, press 'Y' to switch to **Advanced Mode**.
 3.  Navigate to the **Security** tab using the D-pad (right arrow).
 4.  D-pad down to **Secure Boot**, and press 'A' to select.
@@ -63,7 +63,7 @@ Before installing the operating system, you **must** configure specific settings
     * Start the writing process. This may take a few minutes.
 2.  **Boot from USB on Ally:**
     * Connect the prepared bootable USB drive to your ROG Ally (a USB-C hub might be needed if your Ally only has one USB-C port).
-    * Power on your Ally. As soon as you see the ROG logo, repeatedly press the **Volume Down button** until the boot menu appears.
+    * Power on your Ally. As soon as you see the ROG logo, repeatedly press the **Volume up button** until the boot menu appears.
     * Select your USB drive from the boot options.
 3.  **Follow On-Screen Installer Instructions:**
     * The installer will boot. Follow the prompts to install SteamOS .
