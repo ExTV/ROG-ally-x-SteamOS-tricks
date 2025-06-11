@@ -74,7 +74,7 @@ Before installing the operating system, you **must** configure specific settings
 ---
 
 ## Known Issues & Troubleshooting
-Here's a list of common issues users encounter when running SteamOS on the ROG Ally, along with their solutions.
+Here's a list of common issues users encounter when running SteamOS on the ROG Ally and Steam Deck, along with their solutions.
 
 ## Controller Not Working in Discover App (fwupd issue)
 * **Problem:** After switching to **Desktop Mode** and launching the **Discover app**, the Ally's built-in controller stops responding.
@@ -85,6 +85,18 @@ Here's a list of common issues users encounter when running SteamOS on the ROG A
 * **Problem:** When attempting to disable Secure Boot in the ROG Ally's BIOS settings, the changes are not saved upon exiting, and Secure Boot remains enabled.
 * **Cause:** This issue can occur due to a power state or a specific interaction when the device is connected to its charger during the BIOS modification process.
 * **Solution:** **Disconnect your ROG Ally from the charger** before entering the BIOS and attempting to disable Secure Boot. Make the desired change, save, and exit. The setting should now persist. You can reconnect the charger after the system has booted.
+
+## UI Sounds Not Working 
+* **Problem:** The Steam Deck UI no longer makes sounds (excluding the initial startup and in-game sounds). navigating menus and the library is silent. Restarting the device does not resolve this issue.
+* **Cause:** The Steam application's internal audio (often handled by Chromium for web content like trailers) was muted in the system's application volume mixer.
+* **Note:** Before proceeding with the solution below, please ensure that "Enable UI sound" is checked in your Steam's settings under **Settings > Audio**.
+* **Solution:**
+    1.  Switch to **Desktop Mode** on your Steam Deck.
+    2.  While in Desktop Mode, ensure the Steam application is actively playing audio (e.g., by playing a game trailer in the Steam store page within the app).
+    3.  Open the system's audio volume controls (usually by clicking the speaker icon in the taskbar).
+    4.  Navigate to the "Applications" or "Playback Devices" tab within the volume mixer.
+    5.  Locate the volume slider for "Chromium" (or the specific Steam application process responsible for web content/trailers) and ensure it is unmuted and the volume is set appropriately.
+
 
 ---
 
