@@ -143,8 +143,6 @@ Before installing the operating system, you **must** configure specific settings
    - Return to **System Settings**
    - Change update channel from **"Stable"** to **"Main"**
 
-> 🚀 **Quick Setup:** Use our [automated post-installation script](scripts/post-install-setup.sh) to handle these steps automatically!
-
 ---
 
 ## 🔧 Known Issues & Troubleshooting
