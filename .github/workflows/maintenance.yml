@@ -1,0 +1,144 @@
+name: Repository Maintenance
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run weekly maintenance on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+
+jobs:
+  lint-markdown:
+    name: Lint Markdown Files
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install markdownlint-cli
+      run: npm install -g markdownlint-cli
+      
+    - name: Lint Markdown files
+      run: markdownlint "**/*.md" --ignore node_modules --ignore .git
+      continue-on-error: true
+
+  validate-scripts:
+    name: Validate Shell Scripts
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Install ShellCheck
+      run: sudo apt-get update && sudo apt-get install -y shellcheck
+      
+    - name: Check shell scripts
+      run: |
+        find scripts/ -name "*.sh" -type f | while read -r script; do
+          echo "Checking $script"
+          shellcheck "$script" || echo "Warning: Issues found in $script"
+        done
+      continue-on-error: true
+
+  check-links:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install markdown-link-check
+      run: npm install -g markdown-link-check
+      
+    - name: Check links in README
+      run: markdown-link-check README.md --config .github/workflows/link-check-config.json
+      continue-on-error: true
+
+  auto-update-steamos-info:
+    name: Check for SteamOS Updates
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Check SteamOS version
+      run: |
+        echo "Checking for SteamOS updates..."
+        # This is a placeholder for actual version checking logic
+        # In practice, you might scrape the Steam website or check an API
+        curl -s "https://store.steampowered.com/steamos/" | grep -o "Version [0-9.]*" || echo "Could not determine version"
+        
+    - name: Create issue if update available
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'Check for SteamOS Updates',
+            body: 'The automated check suggests there might be a new SteamOS version available. Please verify and update the documentation if needed.',
+            labels: ['maintenance', 'steamos-update']
+          });
+
+  label-management:
+    name: Ensure Required Labels Exist
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Create labels
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const labels = [
+            { name: 'bug', color: 'd73a4a', description: 'Something isn\'t working' },
+            { name: 'enhancement', color: 'a2eeef', description: 'New feature or request' },
+            { name: 'question', color: 'd876e3', description: 'Further information is requested' },
+            { name: 'documentation', color: '0075ca', description: 'Improvements or additions to documentation' },
+            { name: 'good first issue', color: '7057ff', description: 'Good for newcomers' },
+            { name: 'help wanted', color: '008672', description: 'Extra attention is needed' },
+            { name: 'steamos-update', color: 'fbca04', description: 'Related to SteamOS version updates' },
+            { name: 'maintenance', color: 'fef2c0', description: 'Repository maintenance tasks' },
+            { name: 'scripts', color: '0052cc', description: 'Related to automation scripts' },
+            { name: 'hardware', color: 'b60205', description: 'Hardware-related issues or features' }
+          ];
+          
+          for (const label of labels) {
+            try {
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: label.name,
+                color: label.color,
+                description: label.description
+              });
+              console.log(`Created label: ${label.name}`);
+            } catch (error) {
+              if (error.status === 422) {
+                console.log(`Label ${label.name} already exists`);
+              } else {
+                console.error(`Error creating label ${label.name}:`, error);
+              }
+            }
+          }
