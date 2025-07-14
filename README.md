@@ -72,7 +72,7 @@ Before you begin, make sure you have:
 
 | Item | Description | Links |
 |------|-------------|--------|
-| 💾 **USB Drive** | 16GB or larger for bootable installer | - |
+| 💾 **USB Drive** | 16GB or larger for bootable installer | ... |
 | 🛠️ **Image Writing Tool** | To create bootable USB | [Rufus](https://rufus.ie/) (Windows) • [Balena Etcher](https://www.balena.io/etcher/) (Cross-platform) |
 | 💿 **SteamOS Image** | Official recovery image | [Download here](https://store.steampowered.com/steamos/download/?ver=steamdeck&snr=100601___) |
 | 💾 **Backup Storage** | For Windows backup (optional) | External drive or cloud storage |
